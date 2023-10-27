@@ -14,6 +14,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
     class="w-12 mb-6 md:mb-0 font-semibold uppercase tracking-wide text-neutral-10 hover:text-primary-9"
   >
     <Logo />
+    <span class="sr-only">Justin Metros - Home</span>
   </a>
 
   <nav role="navigation">
@@ -23,7 +24,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
           <li>
             <a
               href={item.link}
-              class={`hover:text-primary-12 ${pathname === item.link ? 'text-neutral-10' : ''}`}
+              class={`hover:text-primary-12 ${pathname === item.link ? 'text-neutral-11' : ''}`}
             >
               {item.title}
             </a>
