@@ -5,7 +5,7 @@ description: "AI/ML/Houdini Collaborative Art Project with David Choe"
 slug: "munko"
 isPublish: true
 featured: true
-externalLink: "https:/munko.io"
+externalLink: "https://munko.io"
 ---
 
 ## Vocesque meum remis est neque Neptunus monte
