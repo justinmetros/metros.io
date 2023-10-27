@@ -12,14 +12,14 @@ import { Image } from "astro:assets";
     profile.image && (
       <Image
         src={profile.image}
-        class="w-1/4 self-center rounded-full"
+        class="w-1/2 md:w-1/4 self-center rounded-full"
         alt="Justin Metros Profile"
         width="200"
         height="200"
       />
     )
   }
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-6 text-center md:text-left">
     <h1 class="font-display text-4xl font-thin text-primary-12">
       {profile.title}
     </h1>
@@ -29,6 +29,6 @@ import { Image } from "astro:assets";
       set:html={convertAsteriskToStrongTag(profile.description)}
     />
 
-    <SocialLinks />
+    <div class="mx-auto md:mx-0"><SocialLinks /></div>
   </div>
 </article>

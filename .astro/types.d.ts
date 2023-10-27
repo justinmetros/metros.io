@@ -216,8 +216,36 @@ declare module 'astro:content' {
   collection: "press";
   data: InferEntrySchema<"press">
 } & { render(): Render[".md"] };
+"07-awwwards.md": {
+	id: "07-awwwards.md";
+  slug: "awwards-anyi-lu";
+  body: string;
+  collection: "press";
+  data: InferEntrySchema<"press">
+} & { render(): Render[".md"] };
+"08-maps.md": {
+	id: "08-maps.md";
+  slug: "maps";
+  body: string;
+  collection: "press";
+  data: InferEntrySchema<"press">
+} & { render(): Render[".md"] };
+"09-snoop-rage.md": {
+	id: "09-snoop-rage.md";
+  slug: "rage";
+  body: string;
+  collection: "press";
+  data: InferEntrySchema<"press">
+} & { render(): Render[".md"] };
 };
 "projects": {
+"00-toklas.md": {
+	id: "00-toklas.md";
+  slug: "toklas";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
 "01-munko.md": {
 	id: "01-munko.md";
   slug: "munko";
@@ -235,6 +263,118 @@ declare module 'astro:content' {
 "03-universal-standard.md": {
 	id: "03-universal-standard.md";
   slug: "universal-standard";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"04-bagatiba.md": {
+	id: "04-bagatiba.md";
+  slug: "ubagatiba";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"05-basic-swim.md": {
+	id: "05-basic-swim.md";
+  slug: "basic-swim";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"06-jue-illimete.md": {
+	id: "06-jue-illimete.md";
+  slug: "jue-illimite";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"07-mission.md": {
+	id: "07-mission.md";
+  slug: "mission";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"08-usa-baseball.md": {
+	id: "08-usa-baseball.md";
+  slug: "usa-baseball";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"09-dualitas.md": {
+	id: "09-dualitas.md";
+  slug: "dualitas";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"10-best.md": {
+	id: "10-best.md";
+  slug: "best";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"11-upper-playground.md": {
+	id: "11-upper-playground.md";
+  slug: "upper-playground";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"12-rebel8.md": {
+	id: "12-rebel8.md";
+  slug: "rebel8";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"13-radiator.md": {
+	id: "13-radiator.md";
+  slug: "radiator";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"14-rhymesayers.md": {
+	id: "14-rhymesayers.md";
+  slug: "brakdance-beach";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"15-ggn.md": {
+	id: "15-ggn.md";
+  slug: "ggn";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"16-benefit-cosmetics.md": {
+	id: "16-benefit-cosmetics.md";
+  slug: "benefit";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"17-kenmore.md": {
+	id: "17-kenmore.md";
+  slug: "kenmore";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"18-cstng-shdws.md": {
+	id: "18-cstng-shdws.md";
+  slug: "cstng-shdws";
+  body: string;
+  collection: "projects";
+  data: InferEntrySchema<"projects">
+} & { render(): Render[".md"] };
+"19-feya-health.md": {
+	id: "19-feya-health.md";
+  slug: "feya-health";
   body: string;
   collection: "projects";
   data: InferEntrySchema<"projects">

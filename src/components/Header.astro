@@ -1,6 +1,6 @@
 ---
 import removeTrailingSlash from "@/utils/removeTrailingSlash";
-import { navigation, profile } from "@/data/config";
+import { navigation } from "@/data/config";
 import Logo from "./Logo.astro";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
@@ -11,7 +11,7 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
 >
   <a
     href="/"
-    class="w-12 font-semibold uppercase tracking-wide text-neutral-10 hover:text-primary-9"
+    class="w-12 mb-6 md:mb-0 font-semibold uppercase tracking-wide text-neutral-10 hover:text-primary-9"
   >
     <Logo />
   </a>
@@ -19,20 +19,17 @@ const pathname = removeTrailingSlash(Astro.url.pathname);
   <nav role="navigation">
     <ul role="list" class="flex flex-row gap-2">
       {
-        navigation.map((item, index) => {
+        navigation.map((item, index) => (
           <li>
             <a
-              href="/"
-              class:list={{
-                ["hover:text-primary-12"]: true,
-                ["text-neutral-10"]: pathname === item.link,
-              }}
+              href={item.link}
+              class={`hover:text-primary-12 ${pathname === item.link ? 'text-neutral-10' : ''}`}
             >
               {item.title}
             </a>
-            {index < navigation.length && <span class="mx-1">/</span>}
-          </li>;
-        })
+            {index < navigation.length - 1 && <span class="mx-1">/</span>}
+          </li>
+        ))
       }
     </ul>
   </nav>
