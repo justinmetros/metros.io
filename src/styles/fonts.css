@@ -5,13 +5,13 @@
   font-weight: 100;
   font-style: normal;
 }
-@font-face {
+/* @font-face {
   font-family: 'Reckless Neue';
   src: local('Reckless Neue Thin Italic'), local('RecklessNeue-ThinItalic'),
       url('/fonts/RecklessNeue-ThinItalic.woff2') format('woff2');
   font-weight: 100;
   font-style: italic;
-}
+} */
 
 @font-face {
   font-family: 'Matter';
