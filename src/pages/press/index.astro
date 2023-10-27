@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Heading from "@/components/Heading.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const section = "press";
+
+const projects = (await getCollection(section)).sort(function (first, second) {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});
+---
+
+<Layout title="Media / Press - All">
+  <main class="flex flex-col gap-20">
+    <Heading tag="h1" class="text-xl font-semibold uppercase text-neutral-11">
+      Press / Media
+    </Heading>
+    <article class="flex flex-col gap-4">
+      {
+        projects.map((project) => (
+          <ProjectCard
+            publishedAt={project.data.publishedAt}
+            title={project.data.title}
+            description={project.data.description}
+            slug={project.slug}
+            externalLink={project.data.externalLink}
+            category={section}
+          />
+        ))
+      }
+    </article>
+  </main>
+</Layout>

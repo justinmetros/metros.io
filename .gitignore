@@ -1,0 +1,54 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# typescript
+*.tsbuildinfo
+
+/.cache
+/.data/cache
+/server/build
+/public/build
+
+.node-persist/
+
+# IDEs
+.vscode
+
+# config
+__auto-generated-config__.json
+
+# Notes
+/notes.md
+
+
+notes.md
+.vercel
+
+api
+
+public/entry.worker.js
+.DS_Store

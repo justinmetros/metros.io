@@ -1,0 +1,10 @@
+---
+const {
+  tag: Tag = "h2",
+  class: className = "text-sm tracking-wide text-primary-12 ",
+} = Astro.props;
+---
+
+<Tag class={className}>
+  <slot />
+</Tag>

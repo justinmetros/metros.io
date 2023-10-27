@@ -1,0 +1,22 @@
+---
+import { profile } from "@/data/config";
+import Link from "./Link.astro";
+import SocialLinks from "./SocialLinks.astro";
+import IconEmail from "./icons/IconEmail.astro";
+---
+
+<article class="flex flex-col gap-8">
+  <header class="flex w-full flex-row justify-between gap-2">
+    <h3 class="text-lg text-neutral-100">Get in touch</h3>
+  </header>
+  <div class="flex flex-col justify-between gap-8 md:flex-row">
+    <p class="flex items-center gap-2">
+      <IconEmail className="fill-primary-12 w-5 h-5" />
+      <Link href={`mailto:${profile.mail}`} label={profile.mail} />
+    </p>
+    <p class="mb-2 font-semibold text-primary-12">
+      Currently open for select projects.
+    </p>
+  </div>
+  <SocialLinks />
+</article>

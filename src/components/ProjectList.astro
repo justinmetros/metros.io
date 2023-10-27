@@ -1,0 +1,77 @@
+---
+import { getCollection } from "astro:content";
+import Link from "./Link.astro";
+import ProjectCard from "./ProjectCard.astro";
+import Heading from "./Heading.astro";
+import { collections } from "../content/config";
+
+type CollectionKey = keyof typeof collections;
+
+interface ProjectListProps {
+  category?: string;
+  title?: string;
+  limit?: number;
+  featured?: boolean;
+}
+
+function isCollectionKey(key: string): key is CollectionKey {
+  return key in collections;
+}
+
+const props: ProjectListProps = Astro.props;
+const {
+  category = "projects",
+  title = "Projects",
+  limit = 5,
+  featured = false,
+} = props;
+
+let projects: any[] = [];
+
+if (isCollectionKey(category)) {
+  projects = (await getCollection(category))
+    .filter((project) =>
+      featured ? project.data.featured : !project.data.featured
+    )
+    .sort(function (first, second) {
+      return (
+        second.data.publishedAt.getTime() - first.data.publishedAt.getTime()
+      );
+    });
+}
+
+const link = `/${category}`;
+---
+
+<article class="flex flex-col gap-8">
+  <header class="flex w-full flex-row justify-between gap-2">
+    <Heading tag="h3">
+      {title}<span class:list={["text-sm", featured && "hidden"]}>
+        ({projects.length})</span
+      >
+    </Heading>
+    {
+      !featured && (
+        <Link href={link} label={"View all"} isUnderline target="_self" />
+      )
+    }
+  </header>
+  {projects.length === 0 && <p>Soon, stay connected 👀...</p>}
+  <section class="flex flex-col gap-4">
+    {
+      projects.length !== 0 &&
+        projects
+          .slice(0, limit)
+          .map((project) => (
+            <ProjectCard
+              publishedAt={project.data.publishedAt}
+              title={project.data.title}
+              description={project.data.description}
+              slug={project.slug}
+              externalLink={project.data.externalLink}
+              category={category}
+            />
+          ))
+    }
+  </section>
+</article>
